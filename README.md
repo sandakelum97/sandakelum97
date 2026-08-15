@@ -349,8 +349,6 @@ I write up the things that took me too long to work out the first time — detec
 
 ---
 
-<---
-
 <div align="center">
 
 ## `08` · Activity
