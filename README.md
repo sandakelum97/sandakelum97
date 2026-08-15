@@ -20,7 +20,7 @@ $ whoami --verbose
 
   operator   : Tharaka Dissanayaka
   role       : Security Engineer · Services Security Team
-  environment: Australian MSSP · ~50 managed enterprise tenants
+  environment: MSSP · ~50 managed enterprise tenants
   base       : Colombo, Sri Lanka
   experience : 8+ years  ·  security, infrastructure, network
   focus      : [ SOC Ops, Threat Hunting, Vuln Mgmt, Firewall Eng ]
