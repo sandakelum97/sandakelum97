@@ -14,9 +14,9 @@
 
 ## About
 
-Security engineer with 8+ years across cybersecurity, enterprise infrastructure and network security. I currently run threat detection and endpoint defence for a portfolio of roughly 50 managed enterprise tenants at an Australian MSSP — which means my day is detection triage, incident response, vulnerability management and the occasional 2 a.m. containment call.
+Security engineer with 8+ years across cybersecurity, enterprise infrastructure and network security. I currently run threat detection and endpoint defence for a portfolio of roughly 50 managed enterprise tenants at a MSSP, which means my day is detection triage, incident response, vulnerability management and the occasional 2 a.m. containment call.
 
-My background is unusual in that it runs both ways: I came up through infrastructure — Windows Server, Active Directory, VMware, ERP, backup and DR — before moving into security. That tends to show up in how I triage. Knowing why a line-of-business application spawns a strange-looking process is often the difference between a five-minute false positive and a three-hour incident.
+My background is unusual in that it runs both ways: I came up through infrastructure, Windows Server, Active Directory, VMware, ERP, backup and DR before moving into security. That tends to show up in how I triage. Knowing why a line-of-business application spawns a strange-looking process is often the difference between a five-minute false positive and a three-hour incident.
 
 Currently reading for an **Executive MSc in Information Security**.
 
