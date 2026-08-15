@@ -349,18 +349,19 @@ I write up the things that took me too long to work out the first time — detec
 
 ---
 
+<---
+
 <div align="center">
 
 ## `08` · Activity
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=sandakelum97&theme=chartreuse-dark&hide_border=true&count_private=false"/>
-<img height="160" src="https://github-readme-streak-stats.herokuapp.com/?user=sandakelum97&theme=chartreuse-dark&hide_border=true"/>
-
-<img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sandakelum97&theme=chartreuse-dark&hide_border=true&layout=compact"/>
+<img src="https://img.shields.io/github/followers/sandakelum97?style=for-the-badge&logo=github&logoColor=white&color=00ff41&labelColor=0d1117"/>
+<img src="https://img.shields.io/github/stars/sandakelum97?affiliations=OWNER&style=for-the-badge&logo=github&logoColor=white&color=00ff41&labelColor=0d1117"/>
+<img src="https://komarev.com/ghpvc/?username=sandakelum97&style=for-the-badge&color=00ff41&label=PROFILE+VIEWS"/>
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=sandakelum97&style=flat-square&color=00ff41"/>
+<a href="https://github.com/sandakelum97?tab=repositories"><img src="https://img.shields.io/badge/VIEW_ALL_REPOSITORIES-0d1117?style=for-the-badge&logo=github&logoColor=00ff41"/></a>
 
 <br/><br/>
 
