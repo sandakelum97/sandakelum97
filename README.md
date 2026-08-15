@@ -1,204 +1,354 @@
-<h1 align="center">Tharaka Dissanayaka</h1>
-<p align="center">
-  <b>Senior Security &amp; Systems Engineer</b> · Threat Detection &amp; Endpoint Defence · MSSP
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://linkedin.com/in/tharaka-dissanayaka"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-  <a href="https://medium.com/@sandakelum.97"><img src="https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white" alt="Medium"></a>
-  <a href="mailto:sandakelum.97@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt="Email"></a>
-  <a href="https://sandakelum97.github.io/"><img src="https://img.shields.io/badge/Portfolio-00ff41?logo=githubpages&logoColor=black" alt="Portfolio"></a>
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:080c09,50:00994a,100:00ff41&height=180&section=header&text=Tharaka%20Dissanayaka&fontSize=42&fontColor=f0fff5&fontAlignY=32&desc=Senior%20Security%20%26%20Systems%20Engineer&descSize=16&descAlignY=52" alt="header"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&duration=2600&pause=900&color=00FF41&center=true&vCenter=true&width=560&lines=Threat+Detection+%26+Endpoint+Defence;SOC+Operations+%C2%B7+~50+Managed+Tenants;Incident+Response+%C2%B7+Threat+Hunting;Vulnerability+Management+Research" alt="roles"/>
+
+<br/>
+
+<a href="https://sandakelum97.github.io/"><img src="https://img.shields.io/badge/Portfolio-00ff41?style=for-the-badge&logo=githubpages&logoColor=black"/></a>
+<a href="https://linkedin.com/in/tharaka-dissanayaka"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://medium.com/@sandakelum.97"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white"/></a>
+<a href="mailto:sandakelum.97@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+
+<br/><br/>
+
+<table>
+<tr>
+<td align="center" width="180">
+<h2>8+</h2>
+<sub><b>YEARS IN SECURITY</b></sub>
+</td>
+<td align="center" width="180">
+<h2>~50</h2>
+<sub><b>MANAGED TENANTS</b></sub>
+</td>
+<td align="center" width="180">
+<h2>17</h2>
+<sub><b>CERTIFICATIONS</b></sub>
+</td>
+<td align="center" width="180">
+<h2>MSc</h2>
+<sub><b>IN PROGRESS</b></sub>
+</td>
+</tr>
+</table>
+
+</div>
 
 ---
 
-## About
+## `01` · About
 
-Security engineer with 8+ years across cybersecurity, enterprise infrastructure and network security. I currently run threat detection and endpoint defence for a portfolio of roughly 50 managed enterprise tenants at a MSSP, which means my day is detection triage, incident response, vulnerability management and the occasional 2 a.m. containment call.
+Security engineer with 8+ years across cybersecurity, enterprise infrastructure and network security. I run threat detection and endpoint defence for roughly 50 managed enterprise tenants at an Australian MSSP — detection triage, incident response, vulnerability management, and the occasional 2 a.m. containment call.
 
-My background is unusual in that it runs both ways: I came up through infrastructure, Windows Server, Active Directory, VMware, ERP, backup and DR before moving into security. That tends to show up in how I triage. Knowing why a line-of-business application spawns a strange-looking process is often the difference between a five-minute false positive and a three-hour incident.
+My background runs both ways. I came up through infrastructure — Windows Server, Active Directory, VMware, ERP, backup and DR — before moving into security. That shows up in how I triage: knowing why a line-of-business application spawns a strange-looking process is often the difference between a five-minute false positive and a three-hour incident.
 
-Currently reading for an **Executive MSc in Information Security**.
-
-- 🔭 Building reusable detection-triage and IR playbooks, and automating the parts of SOC work that shouldn't need a human
-- 🌱 Deepening Microsoft Sentinel / KQL detection engineering and identity-centric threat detection
-- 💬 Happy to talk about EDR tuning, phishing triage, vulnerability management programmes, and Zero Trust rollouts that survive contact with real users
-- ⚡ Firm belief: a detection you can't explain in a ticket note isn't a detection, it's a guess
+> **Working belief** — a detection you can't explain in a ticket note isn't a detection, it's a guess.
 
 ---
 
-## What I Work On
+## `02` · Research
+
+<table>
+<tr><td>
+
+**Executive MSc in Information Security** · Asia e University, Malaysia · Nov 2025 – Dec 2026
+
+### Automating Environmental Decision Points in Stakeholder-Specific Vulnerability Categorization
+*A Multi-Tenant Evaluation Against CVSS-Based Remediation Baselines*
+
+</td></tr>
+</table>
+
+**The gap.** Vulnerability prioritisation still runs on CVSS base scores, which describe a flaw in the abstract and say nothing about whether the affected system is internet-facing, patched, or business-critical. SSVC addresses that, but its environmental decision points — system exposure, mission impact — are assigned by hand and don't scale past a handful of assets. Existing automation such as CISA Vulnrichment resolves the vulnerability-specific factors and stops, because the organisation-specific ones can't be derived from public data.
+
+**The question.** Whether those environmental factors can instead be derived from managed service provider telemetry — asset inventories, internet exposure, patch state, business criticality — completing the SSVC decision tree without manual analyst input.
+
+<details>
+<summary><b>Method and evaluation</b></summary>
+
+<br/>
+
+Historical backtesting against public datasets — **NVD**, **EPSS**, **CISA KEV**, **Vulnrichment** — comparing automated SSVC prioritisation against conventional CVSS severity-based remediation across three measures:
+
+| Measure | What it captures |
+|---|---|
+| Exploitation coverage | Share of actually-exploited CVEs caught by each prioritisation scheme |
+| Efficiency | Precision of the remediation queue — how much effort goes to vulnerabilities that mattered |
+| Remediation effort | Total volume of work each approach demands |
+
+The environmental model is built either from aggregated, anonymised statistics drawn from a real multi-tenant managed services environment (subject to approval) or from a fully synthetic dataset where approval is unavailable.
+
+**What it settles:** whether automated, context-aware prioritisation produces better remediation outcomes than severity-ranked patching — or whether the added machinery buys nothing a CVSS cutoff doesn't already deliver.
+
+</details>
+
+---
+
+## `03` · What I Do
+
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### Threat Detection &amp; Response
-Detection triage and tuning across EDR/XDR platforms · process lineage and LOLBin analysis · false-positive adjudication and exclusion scoping · incident response and containment · phishing and BEC investigation · account-compromise response across Microsoft 365 and Entra ID · threat hunting with KQL
+Detection triage and tuning across EDR/XDR · process lineage and LOLBin analysis · false-positive adjudication and exclusion scoping · incident response and containment · phishing and BEC investigation · account-compromise response across M365 and Entra ID · KQL threat hunting
+
+</td>
+<td width="50%" valign="top">
 
 ### Security Operations
 SIEM detection engineering and rule tuning · alert triage at MSSP scale · SOC documentation and playbook development · client-facing advisories and incident reporting · post-incident review
 
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 ### Vulnerability Management
 Exposure analysis and asset reconciliation · CVE research and advisory writing · remediation prioritisation and closure criteria · patch cycle coordination · risk register and exception management
+
+</td>
+<td width="50%" valign="top">
 
 ### Identity &amp; Access
 Microsoft Entra ID · Conditional Access design · MFA and passwordless rollout · privileged access review · Zero Trust architecture
 
-### Infrastructure &amp; Networking
-Windows Server and Active Directory · VMware ESXi · hybrid backup and disaster recovery · firewall policy and segmentation · routing, switching and wireless · Microsoft Dynamics NAV / Business Central
+</td>
+</tr>
+</table>
 
 ---
 
-## Tools &amp; Technologies
+## `04` · Stack
 
-**Endpoint &amp; XDR**
+<details open>
+<summary><b>SOC &amp; Threat Detection</b></summary>
+<br/>
 
-![CrowdStrike](https://img.shields.io/badge/CrowdStrike_Falcon-E01A2B?style=for-the-badge&logo=crowdstrike&logoColor=white)
-![SentinelOne](https://img.shields.io/badge/SentinelOne-6B0AEA?style=for-the-badge&logoColor=white)
-![Microsoft Defender](https://img.shields.io/badge/Defender_for_Endpoint-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![Defender XDR](https://img.shields.io/badge/Microsoft_Defender_XDR-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![CrowdStrike](https://img.shields.io/badge/CrowdStrike_Falcon-E01A2B?style=flat-square&logo=crowdstrike&logoColor=white)
+![Sentinel](https://img.shields.io/badge/Microsoft_Sentinel_(KQL)-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![Proofpoint](https://img.shields.io/badge/Proofpoint_Email_Security-2E7D32?style=flat-square)
+![ThreatLocker](https://img.shields.io/badge/ThreatLocker-1B3A5C?style=flat-square)
+![DarkWeb ID](https://img.shields.io/badge/DarkWeb_ID-4A148C?style=flat-square)
 
-**SIEM &amp; Detection**
+</details>
 
-![Microsoft Sentinel](https://img.shields.io/badge/Microsoft_Sentinel-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![KQL](https://img.shields.io/badge/KQL-004B87?style=for-the-badge&logoColor=white)
-![Splunk](https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white)
-![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-C00?style=for-the-badge&logoColor=white)
+<details open>
+<summary><b>Incident Response &amp; Threat Hunting</b></summary>
+<br/>
 
-**Network Security**
+![MITRE](https://img.shields.io/badge/MITRE_ATT%26CK-C00?style=flat-square)
+![KQL](https://img.shields.io/badge/KQL_Hunting-004B87?style=flat-square)
 
-![FortiGate](https://img.shields.io/badge/FortiGate-EE3124?style=for-the-badge&logo=fortinet&logoColor=white)
-![FortiAnalyzer](https://img.shields.io/badge/FortiAnalyzer-EE3124?style=for-the-badge&logo=fortinet&logoColor=white)
-![SonicWall](https://img.shields.io/badge/SonicWall-FF791A?style=for-the-badge&logoColor=white)
-![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
-![Meraki](https://img.shields.io/badge/Meraki-78BE20?style=for-the-badge&logo=cisco&logoColor=white)
-![Ruckus](https://img.shields.io/badge/Ruckus-C8102E?style=for-the-badge&logoColor=white)
+AiTM phishing investigation and token-theft response · EDR triage across process injection, AMSI tampering, VSS deletion and LSASS access · adversary emulation · CVE triage and threat intelligence correlation
 
-**Identity &amp; Cloud**
+</details>
 
-![Entra ID](https://img.shields.io/badge/Microsoft_Entra_ID-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0072C6?style=for-the-badge&logo=microsoftazure&logoColor=white)
-![Microsoft 365](https://img.shields.io/badge/Microsoft_365-D83B01?style=for-the-badge&logo=microsoftoffice&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+<details open>
+<summary><b>Vulnerability Management</b></summary>
+<br/>
 
-**Vulnerability Management**
+![Nessus](https://img.shields.io/badge/Tenable_Nessus-00B4A0?style=flat-square)
+![Defender TVM](https://img.shields.io/badge/Defender_TVM-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![Defender for Cloud](https://img.shields.io/badge/Defender_for_Cloud-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+![SSVC](https://img.shields.io/badge/SSVC_%2F_EPSS_%2F_KEV-6A1B9A?style=flat-square)
 
-![Nessus](https://img.shields.io/badge/Tenable_Nessus-00B4A0?style=for-the-badge&logoColor=white)
-![Defender TVM](https://img.shields.io/badge/Defender_Vulnerability_Mgmt-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+Remediation tracking, closure criteria, and client-facing exposure reporting.
 
-**Infrastructure**
+</details>
 
-![Windows Server](https://img.shields.io/badge/Windows_Server-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Active Directory](https://img.shields.io/badge/Active_Directory-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![VMware](https://img.shields.io/badge/VMware_ESXi-607078?style=for-the-badge&logo=vmware&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Dynamics 365](https://img.shields.io/badge/Dynamics_NAV_%2F_BC-002050?style=for-the-badge&logo=microsoft&logoColor=white)
+<details>
+<summary><b>Identity &amp; Access Management</b></summary>
+<br/>
 
-**Automation &amp; Code**
+![Entra ID](https://img.shields.io/badge/Microsoft_Entra_ID-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![Conditional Access](https://img.shields.io/badge/Conditional_Access-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![AD](https://img.shields.io/badge/Active_Directory_%2F_GPO-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0072C6?style=flat-square&logo=microsoftazure&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white)
-![Microsoft Graph](https://img.shields.io/badge/Microsoft_Graph_API-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+MFA and passwordless rollout · RBAC and least-privilege design.
 
-**Web &amp; Misc**
+</details>
 
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
-![Pi-hole](https://img.shields.io/badge/Pi--hole-96060C?style=for-the-badge&logo=pi-hole&logoColor=white)
+<details>
+<summary><b>Network &amp; Firewall</b></summary>
+<br/>
 
----
+![FortiGate](https://img.shields.io/badge/FortiGate-EE3124?style=flat-square&logo=fortinet&logoColor=white)
+![FortiManager](https://img.shields.io/badge/FortiManager_%2F_FortiAnalyzer-EE3124?style=flat-square&logo=fortinet&logoColor=white)
+![SonicWall](https://img.shields.io/badge/SonicWall-FF791A?style=flat-square)
+![Cisco](https://img.shields.io/badge/Cisco-1BA0D7?style=flat-square&logo=cisco&logoColor=white)
+![Auvik](https://img.shields.io/badge/Auvik-00A0DF?style=flat-square)
+![Inforcer](https://img.shields.io/badge/Inforcer-263238?style=flat-square)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white)
+![PRTG](https://img.shields.io/badge/PRTG-004C97?style=flat-square)
 
-## Certifications
+IPsec and SSL VPN · VLAN design and segmentation · routing and switching.
 
-**Microsoft**
+</details>
 
-- **SC-100** — Cybersecurity Architect Expert
-- **SC-200** — Security Operations Analyst Associate
-- **SC-300** — Identity and Access Administrator Associate
-- **AZ-900** — Azure Fundamentals
-- **Applied Skills** — Defend Against Cyberthreats with Microsoft Defender XDR
+<details>
+<summary><b>Tooling &amp; Automation</b></summary>
+<br/>
 
-**Security**
+![ConnectWise](https://img.shields.io/badge/ConnectWise_PSA_%2F_RMM_%2F_SIEM-1F4E79?style=flat-square)
+![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=flat-square&logo=powershell&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54)
+![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=flat-square&logo=nodedotjs&logoColor=white)
+![AppSheet](https://img.shields.io/badge/Google_AppSheet-4285F4?style=flat-square&logo=google&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
+![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
-- **ISC2 CC** — Certified in Cybersecurity
-- **Cisco CyberOps Associate**
-- **SecOps CNSP** — Certified Network Security Practitioner
-- **MITRE ATT&CK Defender** — ATT&CK Fundamentals
-- **Fortinet NSE 3** — Network Security Associate
-- **SentinelOne** — Singularity Admin Essentials
-- **Google Cybersecurity Professional Certificate**
+</details>
 
-**Network, Cloud &amp; Platform**
+<details>
+<summary><b>Governance &amp; Compliance</b></summary>
+<br/>
 
-- **Cisco CCNA** — Enterprise and Security
-- **Cisco DevNet Associate**
-- **Google Professional Workspace Administrator**
-- **Google Generative AI Leader**
-- **KodeKloud** — DevOps Engineer Level 1
+![ISO 27001](https://img.shields.io/badge/ISO_27001-005A9C?style=flat-square)
+![NIST CSF](https://img.shields.io/badge/NIST_CSF-1B5E20?style=flat-square)
+![COBIT](https://img.shields.io/badge/COBIT-37474F?style=flat-square)
+![Zero Trust](https://img.shields.io/badge/Zero_Trust_Architecture-263238?style=flat-square)
 
-**In progress**
+Change management · security runbook authoring · policy and control documentation.
 
-- **Executive MSc in Information Security** — Asia e University, Malaysia (Nov 2025 – Dec 2026)
-- **TCM PNPT** — Practical Network Penetration Tester
-- **Google Associate Cloud Engineer**
+</details>
 
-**Planned**
+<details>
+<summary><b>Infrastructure</b></summary>
+<br/>
 
-- **ISC2 CISSP** — Q3 2026
-- **HTB Certified Active Directory Bootcamp Expert**
+![Windows Server](https://img.shields.io/badge/Windows_Server-0078D6?style=flat-square&logo=windows&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware_ESXi-607078?style=flat-square&logo=vmware&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Dynamics](https://img.shields.io/badge/Dynamics_NAV_%2F_BC-002050?style=flat-square&logo=microsoft&logoColor=white)
+![M365](https://img.shields.io/badge/Microsoft_365-D83B01?style=flat-square&logo=microsoftoffice&logoColor=white)
 
----
-
-## Education
-
-- **Executive MSc in Information Security** — Asia e University (AeU), Malaysia · Nov 2025 – Dec 2026 · Advanced Cryptography, Cyber Law, Information Assurance
-- **Diploma in Network Engineering** — National Institute of Business Management (NIBM) · 2019 – 2021
-- **Certificate in Linux Network Administration** — Turnkey IT Campus
+</details>
 
 ---
 
-## Writing
+## `05` · Certifications
+
+<table>
+<tr>
+<td align="center" width="25%"><b>SC-100</b><br/><sub>Cybersecurity Architect Expert</sub></td>
+<td align="center" width="25%"><b>SC-200</b><br/><sub>Security Operations Analyst</sub></td>
+<td align="center" width="25%"><b>SC-300</b><br/><sub>Identity &amp; Access Administrator</sub></td>
+<td align="center" width="25%"><b>AZ-900</b><br/><sub>Azure Fundamentals</sub></td>
+</tr>
+<tr>
+<td align="center"><b>MS Applied Skills</b><br/><sub>Defend Against Cyberthreats · Defender XDR</sub></td>
+<td align="center"><b>ISC2 CC</b><br/><sub>Certified in Cybersecurity</sub></td>
+<td align="center"><b>Cisco CCNA</b><br/><sub>Enterprise &amp; Security</sub></td>
+<td align="center"><b>Cisco CyberOps</b><br/><sub>CyberOps Associate</sub></td>
+</tr>
+<tr>
+<td align="center"><b>Cisco DevNet</b><br/><sub>DevNet Associate</sub></td>
+<td align="center"><b>Fortinet NSE 3</b><br/><sub>Network Security Associate</sub></td>
+<td align="center"><b>SecOps CNSP</b><br/><sub>Certified Network Security Practitioner</sub></td>
+<td align="center"><b>MITRE ATT&amp;CK</b><br/><sub>Defender Fundamentals</sub></td>
+</tr>
+<tr>
+<td align="center"><b>SentinelOne</b><br/><sub>Singularity Admin Essentials</sub></td>
+<td align="center"><b>Google Cybersecurity</b><br/><sub>Professional Certificate</sub></td>
+<td align="center"><b>Google Workspace</b><br/><sub>Professional Administrator</sub></td>
+<td align="center"><b>Google GenAI</b><br/><sub>Generative AI Leader</sub></td>
+</tr>
+<tr>
+<td align="center"><b>KodeKloud</b><br/><sub>DevOps Engineer Level 1</sub></td>
+<td align="center" colspan="3"><sub><i>No exam scores listed — credentials verifiable via the portfolio site</i></sub></td>
+</tr>
+</table>
+
+**In progress** — TCM PNPT (Practical Network Penetration Tester) · Google Associate Cloud Engineer
+**Planned** — ISC2 CISSP (Q3 2026) · HTB Certified Active Directory Bootcamp Expert
+
+### Education
+
+| Qualification | Institution | Period |
+|---|---|---|
+| Executive MSc in Information Security | Asia e University (AeU), Malaysia | Nov 2025 – Dec 2026 |
+| Diploma in Network Engineering | National Institute of Business Management (NIBM) | 2019 – 2021 |
+| Certificate in Linux Network Administration | Turnkey IT Campus | — |
+
+---
+
+## `06` · Selected Work
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**[mssp-soc-playbooks](https://github.com/sandakelum97/mssp-soc-playbooks)**
+KQL queries and detection playbooks from MSSP SOC operations.
+
+</td>
+<td width="50%" valign="top">
+
+**[SC200-SC300-study-plan](https://github.com/sandakelum97/SC200-SC300-study-plan)**
+Structured study plan and notes for the Microsoft SC-200 and SC-300 exams.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[security-training](https://github.com/sandakelum97/security-training)**
+Gamified security awareness platform — phishing and password challenges, leaderboards, JWT auth, PostgreSQL. · [live](https://chesmi-security-training.vercel.app)
+
+</td>
+<td width="50%" valign="top">
+
+**[prompt-engineering-trainer](https://github.com/sandakelum97/prompt-engineering-trainer)**
+Hands-on tool for practising prompt patterns in security and productivity workflows.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[sandakelum97.github.io](https://github.com/sandakelum97/sandakelum97.github.io)**
+Portfolio site — Three.js background, live GitHub and Medium feeds, dark/light themes.
+
+</td>
+<td width="50%" valign="top">
+
+**[claude-skills](https://github.com/sandakelum97)** *(private)*
+Version-controlled Agent Skills for SOC triage, CVE advisories and exposure analysis.
+
+</td>
+</tr>
+</table>
+
+---
+
+## `07` · Writing
 
 I write up the things that took me too long to work out the first time — detection triage reasoning, vulnerability management practice, and the operational side of security that rarely makes it into vendor documentation.
 
-[![Medium](https://img.shields.io/badge/Read_on_Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@sandakelum.97)
+<a href="https://medium.com/@sandakelum.97"><img src="https://img.shields.io/badge/Read_on_Medium-12100E?style=for-the-badge&logo=medium&logoColor=white"/></a>
 
 ---
 
-## Selected Work
+<div align="center">
 
-- **[mssp-soc-playbooks](https://github.com/sandakelum97/mssp-soc-playbooks)** — KQL queries and detection playbooks from MSSP SOC operations
-- **[SC200-SC300-study-plan](https://github.com/sandakelum97/SC200-SC300-study-plan)** — Structured study plan and notes for the Microsoft SC-200 and SC-300 exams
-- **[security-training](https://github.com/sandakelum97/security-training)** — Gamified security awareness platform: phishing and password challenges, leaderboards, JWT auth, PostgreSQL · [live](https://chesmi-security-training.vercel.app)
-- **[prompt-engineering-trainer](https://github.com/sandakelum97/prompt-engineering-trainer)** — Hands-on tool for practising prompt patterns for security and productivity workflows
-- **[sandakelum97.github.io](https://github.com/sandakelum97/sandakelum97.github.io)** — Portfolio site: Three.js background, live GitHub and Medium feeds, dark/light themes
+## `08` · Activity
 
----
+<img height="160" src="https://github-readme-stats.shion.dev/api?username=sandakelum97&theme=chartreuse-dark&hide_border=true&include_all_commits=false&count_private=false"/>
+<img height="160" src="https://streak-stats.demolab.com/?user=sandakelum97&theme=chartreuse-dark&hide_border=true"/>
 
-## GitHub Stats
+<img height="150" src="https://github-readme-stats.shion.dev/api/top-langs/?username=sandakelum97&theme=chartreuse-dark&hide_border=true&layout=compact"/>
 
-<p align="center">
-  <img src="https://github-readme-stats.shion.dev/api?username=sandakelum97&theme=chartreuse-dark&hide_border=false&include_all_commits=false&count_private=false" alt="stats">
-</p>
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=sandakelum97&theme=chartreuse-dark&hide_border=false" alt="streak">
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=sandakelum97&theme=chartreuse-dark&hide_border=false&layout=compact" alt="top languages">
-</p>
+<br/><br/>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sandakelum97&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="trophies">
-</p>
+<img src="https://komarev.com/ghpvc/?username=sandakelum97&style=flat-square&color=00ff41"/>
 
----
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff41,50:00994a,100:080c09&height=100&section=footer"/>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sandakelum97&icon=0&color=0" alt="profile views">
-</p>
+</div>
