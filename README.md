@@ -1,6 +1,6 @@
 <h1 align="center">Tharaka Dissanayaka</h1>
 <p align="center">
-  <b>Senior Security &amp; Systems Engineer</b> · Threat Detection &amp; Endpoint Defence · Australian MSSP
+  <b>Senior Security &amp; Systems Engineer</b> · Threat Detection &amp; Endpoint Defence · MSSP
 </p>
 
 <p align="center">
