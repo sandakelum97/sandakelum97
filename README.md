@@ -27,7 +27,9 @@ $ whoami --verbose
   reading    : Executive MSc, Information Security
   status     : ACTIVE ✓
 ```
-
+GitHub Stats
+<p align="center"> <img src="https://github-readme-stats.shion.dev/api?username=sandakelum97&theme=chartreuse-dark&hide_border=false&include_all_commits=false&count_private=false" alt="stats"> </p> <p align="center"> <img src="https://streak-stats.demolab.com/?user=sandakelum97&theme=chartreuse-dark&hide_border=false" alt="streak"> </p> <p align="center"> <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=sandakelum97&theme=chartreuse-dark&hide_border=false&layout=compact" alt="top languages"> </p> <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=sandakelum97&theme=radical&no-frame=false&no-bg=true&margin-w=4" alt="trophies"> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=sandakelum97&icon=0&color=0" alt="profile views"> </p>
 <div align="center">
 
 |  |  |  |  |
