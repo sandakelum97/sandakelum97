@@ -1,18 +1,32 @@
-# Save as .github/workflows/profile-readme.yml in the sandakelum97/sandakelum97 repo.
-# Job 1 pulls your latest Medium posts into the README between the BLOG-POST-LIST markers.
-# Job 2 generates the contribution snake SVG on the "output" branch that the README embeds.
+# Keeps the profile README's self-generated parts fresh.
+# Jobs run one after another (needs:) so they never race each other pushing to main.
+#   blog-posts → latest Medium articles between the BLOG-POST-LIST markers
+#   summary    → profile summary cards in profile-summary-card-output/chartreuse_dark/
+#   contrib-3d → 3D contribution calendar in profile-3d-contrib/
+#   snake      → contribution snake on the "output" branch
+#
+# Optional: add a classic PAT (scopes: read:user, repo) as the repo secret SUMMARY_GITHUB_TOKEN
+# so the summary cards and 3D calendar can include private-repo activity. Without it they fall
+# back to GITHUB_TOKEN and show public activity only.
 
 name: Update profile README
 
 on:
   schedule:
-    - cron: "0 0 * * *"      # daily at 00:00 UTC
+    - cron: "0 0 * * *"      # daily at 00:00 UTC (05:30 Colombo)
   workflow_dispatch:
   push:
     branches: [main]
+    paths-ignore:
+      - "profile-summary-card-output/**"
+      - "profile-3d-contrib/**"
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-readme
+  cancel-in-progress: false
 
 jobs:
   blog-posts:
@@ -27,6 +41,45 @@ jobs:
           date_format: "dd mmm yyyy"
           commit_message: "chore: update latest articles"
 
+  summary:
+    needs: blog-posts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "main"
+          TIME_ZONE: "Asia/Colombo"
+          THEME: "chartreuse_dark"
+          ANIMATION: "rise"
+          AUTO_PUSH: true
+
+  contrib-3d:
+    needs: summary
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: yoshi389111/github-profile-3d-contrib@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      - name: Commit & push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A profile-3d-contrib
+          if git commit -m "chore: update 3D contribution calendar"; then
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
   snake:
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +88,7 @@ jobs:
           github_user_name: sandakelum97
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#00ff41&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
       - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
