@@ -149,8 +149,7 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 
 ## Latest Articles
 
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
+<!-- BLOG-POST-LIST:START -->- [How a thesis question fixed the SSVC standard](https://medium.com/@sandakelum.97/how-a-thesis-question-fixed-the-ssvc-standard-c8ed424e1412?source=rss-3a50254cccf9------2) — 24 Oct 2026- [When Offboarding Goes Wrong: The Security Debt Nobody Talks About](https://medium.com/@sandakelum.97/when-offboarding-goes-wrong-the-security-debt-nobody-talks-about-be6129dec0c2?source=rss-3a50254cccf9------2) — 18 Aug 2026- [How I Passed the SC-100: Microsoft Cybersecurity Architect Exam](https://medium.com/@sandakelum.97/how-i-passed-the-sc-100-microsoft-cybersecurity-architect-exam-0113664d5351?source=rss-3a50254cccf9------2) — 15 Aug 2026- [BEC Is Not Just an Email Problem - It’s an Organizational Crisis](https://medium.com/@sandakelum.97/bec-is-not-just-an-email-problem-its-an-organisational-crisis-940c7025b8f7?source=rss-3a50254cccf9------2) — 04 Jul 2026- [THM Weaponization Room](https://medium.com/@sandakelum.97/thm-weaponization-room-153311189b69?source=rss-3a50254cccf9------2) — 21 Jun 2026<!-- BLOG-POST-LIST:END -->
 
 ➡️ [More on Medium](https://medium.com/@sandakelum.97)
 
