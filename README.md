@@ -129,8 +129,7 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 
 </div>
 
-**In progress** · TCM PNPT · Google Associate Cloud Engineer
-**Planned** · ISC2 CISSP (Q3 2026) · HTB Certified Active Directory Bootcamp Expert
+**Working toward** · [Microsoft SC-500](https://learn.microsoft.com/credentials/certifications/cloud-and-ai-security-engineer/) · [TryHackMe AI1](https://tryhackme.com/certification/ai-security) · [ISC2 CISSP](https://www.isc2.org/certifications/cissp) · [CompTIA SecAI+](https://www.comptia.org/en/certifications/secai/)
 
 <br/>
 
