@@ -137,10 +137,10 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 
 <div align="center">
 
-<a href="https://github.com/sandakelum97/mssp-soc-playbooks"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sandakelum97&repo=mssp-soc-playbooks&theme=chartreuse-dark&hide_border=true" alt="mssp-soc-playbooks"/></a>
-<a href="https://github.com/sandakelum97/SC200-SC300-study-plan"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sandakelum97&repo=SC200-SC300-study-plan&theme=chartreuse-dark&hide_border=true" alt="SC200-SC300-study-plan"/></a>
-<a href="https://github.com/sandakelum97/security-training"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sandakelum97&repo=security-training&theme=chartreuse-dark&hide_border=true" alt="security-training"/></a>
-<a href="https://github.com/sandakelum97/prompt-engineering-trainer"><img src="https://github-readme-stats.vercel.app/api/pin/?username=sandakelum97&repo=prompt-engineering-trainer&theme=chartreuse-dark&hide_border=true" alt="prompt-engineering-trainer"/></a>
+<a href="https://github.com/sandakelum97/mssp-soc-playbooks"><img src="https://github-readme-stats.shion.dev/api/pin/?username=sandakelum97&repo=mssp-soc-playbooks&theme=chartreuse-dark&hide_border=true" alt="mssp-soc-playbooks"/></a>
+<a href="https://github.com/sandakelum97/SC200-SC300-study-plan"><img src="https://github-readme-stats.shion.dev/api/pin/?username=sandakelum97&repo=SC200-SC300-study-plan&theme=chartreuse-dark&hide_border=true" alt="SC200-SC300-study-plan"/></a>
+<a href="https://github.com/sandakelum97/security-training"><img src="https://github-readme-stats.shion.dev/api/pin/?username=sandakelum97&repo=security-training&theme=chartreuse-dark&hide_border=true" alt="security-training"/></a>
+<a href="https://github.com/sandakelum97/prompt-engineering-trainer"><img src="https://github-readme-stats.shion.dev/api/pin/?username=sandakelum97&repo=prompt-engineering-trainer&theme=chartreuse-dark&hide_border=true" alt="prompt-engineering-trainer"/></a>
 
 </div>
 
@@ -148,7 +148,8 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 
 ## Latest Articles
 
-<!-- BLOG-POST-LIST:START -->- [How a thesis question fixed the SSVC standard](https://medium.com/@sandakelum.97/how-a-thesis-question-fixed-the-ssvc-standard-c8ed424e1412?source=rss-3a50254cccf9------2) — 24 Oct 2026 
+<!-- BLOG-POST-LIST:START -->
+- [How a thesis question fixed the SSVC standard](https://medium.com/@sandakelum.97/how-a-thesis-question-fixed-the-ssvc-standard-c8ed424e1412?source=rss-3a50254cccf9------2) — 24 Oct 2026 
 - [When Offboarding Goes Wrong: The Security Debt Nobody Talks About](https://medium.com/@sandakelum.97/when-offboarding-goes-wrong-the-security-debt-nobody-talks-about-be6129dec0c2?source=rss-3a50254cccf9------2) — 18 Aug 2026 
 - [How I Passed the SC-100: Microsoft Cybersecurity Architect Exam](https://medium.com/@sandakelum.97/how-i-passed-the-sc-100-microsoft-cybersecurity-architect-exam-0113664d5351?source=rss-3a50254cccf9------2) — 15 Aug 2026 
 - [BEC Is Not Just an Email Problem - It’s an Organizational Crisis](https://medium.com/@sandakelum.97/bec-is-not-just-an-email-problem-its-an-organisational-crisis-940c7025b8f7?source=rss-3a50254cccf9------2) — 04 Jul 2026 
@@ -163,8 +164,8 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=sandakelum97&show_icons=true&count_private=true&include_all_commits=true&theme=chartreuse-dark&hide_border=true" alt="GitHub stats"/>
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sandakelum97&layout=compact&theme=chartreuse-dark&hide_border=true" alt="Top languages"/>
+<img height="165" src="https://github-readme-stats.shion.dev/api?username=sandakelum97&show_icons=true&count_private=true&include_all_commits=true&theme=chartreuse-dark&hide_border=true" alt="GitHub stats"/>
+<img height="165" src="https://github-readme-stats.shion.dev/api/top-langs/?username=sandakelum97&layout=compact&theme=chartreuse-dark&hide_border=true" alt="Top languages"/>
 
 <br/><br/>
 

@@ -23,7 +23,7 @@ jobs:
         with:
           feed_list: "https://medium.com/feed/@sandakelum.97"
           max_post_count: 5
-          template: "- [$title]($url) — $date $newline"
+          template: "$newline- [$title]($url) — $date"
           date_format: "dd mmm yyyy"
           commit_message: "chore: update latest articles"
 
