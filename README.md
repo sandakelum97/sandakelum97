@@ -41,9 +41,10 @@
 |---|---|---|
 | **SOC automation pipeline** | Automated threat intel and alert enrichment for an MSSP SOC | n8n · Supabase · Claude |
 | **claude-skills** · *private* | Version-controlled Agent Skills for SOC triage, CVE advisories and exposure analysis | Claude · Markdown · PowerShell |
-| **[sc500-field-manual](https://github.com/sandakelum97/sc500-field-manual)** | Field notes for the Microsoft SC-500 Cloud & AI Security Engineer exam | JavaScript |
+| **[sc500-field-manual](https://github.com/sandakelum97/sc500-field-manual)** | Field notes I used to pass Microsoft SC-500 (Cloud & AI Security Engineer) | JavaScript |
 | **expense-manager** · *private* | Self-hosted personal finance app | TypeScript · Supabase · Vercel |
 | **[mssp-soc-playbooks](https://github.com/sandakelum97/mssp-soc-playbooks)** | KQL hunting queries and detection playbooks from real MSSP work | KQL · Sentinel · Defender XDR |
+| **[sri-lanka-pdpa-awareness](https://github.com/sandakelum97/sri-lanka-pdpa-awareness)** | Bilingual (Sinhala/English) public guide to Sri Lanka's Personal Data Protection Act No. 9 of 2022 | Legal research · Static web |
 
 <br/>
 
@@ -134,6 +135,8 @@
 
 CVSS base scores describe a flaw in the abstract and say nothing about whether the affected system is internet-facing, patched or business-critical. SSVC addresses that, but its environmental decision points are assigned by hand. This research tests whether those decision points can be derived from managed service provider telemetry, and backtests the result against **NVD, EPSS, CISA KEV and Vulnrichment** to compare exploitation coverage, efficiency and remediation effort with conventional CVSS-ranked patching.
 
+A question raised during this research led to a merged contribution to the SSVC standard maintained by the CERT Coordination Center (Carnegie Mellon University) — [the story on Medium](https://medium.com/@sandakelum.97/how-a-thesis-question-fixed-the-ssvc-standard-c8ed424e1412).
+
 <br/>
 
 ## `$ ls ./certs`
@@ -141,6 +144,7 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 <div align="center">
 
 ![SC-100](https://img.shields.io/badge/SC--100-Cybersecurity_Architect_Expert-0078D4?style=flat-square&logo=microsoft&logoColor=white)
+![SC-500](https://img.shields.io/badge/SC--500-Cloud_%26_AI_Security_Engineer-0078D4?style=flat-square&logo=microsoft&logoColor=white)
 ![SC-200](https://img.shields.io/badge/SC--200-Security_Operations_Analyst-0078D4?style=flat-square&logo=microsoft&logoColor=white)
 ![SC-300](https://img.shields.io/badge/SC--300-Identity_%26_Access_Administrator-0078D4?style=flat-square&logo=microsoft&logoColor=white)
 ![AZ-900](https://img.shields.io/badge/AZ--900-Azure_Fundamentals-0078D4?style=flat-square&logo=microsoft&logoColor=white)
@@ -160,7 +164,6 @@ CVSS base scores describe a flaw in the abstract and say nothing about whether t
 
 **Working toward**
 
-<a href="https://learn.microsoft.com/credentials/certifications/cloud-and-ai-security-engineer/"><img src="https://img.shields.io/badge/SC--500-Cloud_%26_AI_Security_Engineer-555?style=flat-square&logo=microsoft&logoColor=white&labelColor=0078D4"/></a>
 <a href="https://tryhackme.com/certification/ai-security"><img src="https://img.shields.io/badge/TryHackMe-AI1-555?style=flat-square&logo=tryhackme&logoColor=white&labelColor=212C42"/></a>
 <a href="https://www.isc2.org/certifications/cissp"><img src="https://img.shields.io/badge/ISC2-CISSP-555?style=flat-square&labelColor=2E7D32"/></a>
 <a href="https://www.comptia.org/en/certifications/secai/"><img src="https://img.shields.io/badge/CompTIA-SecAI%2B-555?style=flat-square&labelColor=C8202F"/></a>
